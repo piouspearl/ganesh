@@ -1,1 +1,26 @@
-<p>logistics-form works!</p>
+<mat-card>
+    <mat-card-title>Logistics Details</mat-card-title>
+    <mat-card-content>
+      <form (ngSubmit)="submitLogisticsDetails()">
+        <mat-form-field appearance="fill">
+          <mat-label>Order ID</mat-label>
+          <input matInput [(ngModel)]="logisticsDetails.orderId" name="orderId" required>
+        </mat-form-field>
+        <mat-form-field appearance="fill">
+          <mat-label>Shipping Method</mat-label>
+          <input matInput [(ngModel)]="logisticsDetails.shippingMethod" name="shippingMethod" required>
+        </mat-form-field>
+        <mat-form-field appearance="fill">
+          <mat-label>Tracking Number</mat-label>
+          <input matInput [(ngModel)]="logisticsDetails.trackingNumber" name="trackingNumber" required>
+        </mat-form-field>
+        <mat-form-field appearance="fill">
+          <mat-label>Estimated Delivery Date</mat-label>
+          <input matInput [matDatepicker]="picker" [(ngModel)]="logisticsDetails.estimatedDeliveryDate" name="estimatedDeliveryDate" required>
+          <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+          <mat-datepicker #picker></mat-datepicker>
+        </mat-form-field>
+        <button mat-raised-button color="primary" type="submit">Submit Logistics Details</button>
+      </form>
+    </mat-card-content>
+  </mat-card>

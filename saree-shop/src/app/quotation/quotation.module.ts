@@ -6,7 +6,7 @@ import { MatCardModule } from '@angular/material/card';
 import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
 import { MatTableModule } from '@angular/material/table';
-
+import { SharedModule } from '../shared/shared.module';
 import { QuotationFormComponent } from './quotation-form/quotation-form.component';
 import { QuotationListComponent } from './quotation-list/quotation-list.component';
 
@@ -15,6 +15,7 @@ import { QuotationListComponent } from './quotation-list/quotation-list.componen
   imports: [
     CommonModule,
     FormsModule,
+    SharedModule,
     RouterModule.forChild([
       { path: 'create', component: QuotationFormComponent },
       { path: 'list', component: QuotationListComponent }

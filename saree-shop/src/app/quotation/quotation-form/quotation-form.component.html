@@ -1,1 +1,25 @@
 <p>quotation-form works!</p>
+<mat-card>
+    <mat-card-title>Submit Quotation</mat-card-title>
+    <mat-card-content>
+      <form (ngSubmit)="submitQuotation()">
+        <mat-form-field appearance="fill">
+          <mat-label>Customer Name</mat-label>
+          <input matInput [(ngModel)]="quotation.customerName" name="customerName" required>
+        </mat-form-field>
+        <mat-form-field appearance="fill">
+          <mat-label>Saree Type</mat-label>
+          <input matInput [(ngModel)]="quotation.sareeType" name="sareeType" required>
+        </mat-form-field>
+        <mat-form-field appearance="fill">
+          <mat-label>Quantity</mat-label>
+          <input matInput type="number" [(ngModel)]="quotation.quantity" name="quantity" required>
+        </mat-form-field>
+        <mat-form-field appearance="fill">
+          <mat-label>Price</mat-label>
+          <input matInput type="number" [(ngModel)]="quotation.price" name="price" required>
+        </mat-form-field>
+        <button mat-raised-button color="primary" type="submit">Submit Quotation</button>
+      </form>
+    </mat-card-content>
+  </mat-card>

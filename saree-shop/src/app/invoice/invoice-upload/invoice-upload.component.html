@@ -1,1 +1,13 @@
-<p>invoice-upload works!</p>
+<mat-card>
+    <mat-card-title>Upload Invoice</mat-card-title>
+    <mat-card-content>
+      <form (ngSubmit)="uploadInvoice()">
+        <mat-form-field appearance="fill">
+          <mat-label>Order ID</mat-label>
+          <input matInput [(ngModel)]="orderId" name="orderId" required>
+        </mat-form-field>
+        <input type="file" (change)="onFileSelected($event)" accept=".pdf,.jpg,.png" required>
+        <button mat-raised-button color="primary" type="submit">Upload Invoice</button>
+      </form>
+    </mat-card-content>
+  </mat-card>
