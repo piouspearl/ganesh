@@ -1,19 +1,7 @@
-<mat-toolbar color="primary">
-  <span>{{title}}</span>
-  <span class="spacer"></span>
-  <ng-container *ngIf="!isLoggedIn">
-    <button type="button" mat-button routerLink="/auth/login">Login</button>
-    <button type="button" mat-button routerLink="/auth/register">Register</button>
-  </ng-container>
-  <ng-container *ngIf="isLoggedIn">
-    <button mat-button routerLink="/quotation/list">Quotations</button>
-    <button mat-button routerLink="/quotation/create">Create Quotation</button>
-    <button mat-button routerLink="/invoice/upload">Upload Invoice</button>
-    <button mat-button routerLink="/logistics/create">Logistics</button>
-    <button mat-button (click)="logout()">Logout</button>
-  </ng-container>
-</mat-toolbar>
+<app-header></app-header>
 
-<div class="container">
+<div class="content">
   <router-outlet></router-outlet>
 </div>
+
+<app-footer></app-footer>

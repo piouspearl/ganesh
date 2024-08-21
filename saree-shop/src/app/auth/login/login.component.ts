@@ -15,12 +15,12 @@ export class LoginComponent {
 
   login() {
     this.authService.login(this.username, this.password).subscribe(
-      (user) => {
+      () => {
         this.router.navigate(['/quotation/list']);
       },
       (error) => {
         console.error('Login error', error);
-        alert('Login failed. Please check your credentials.');
+        alert('An error occurred during login');
       }
     );
   }

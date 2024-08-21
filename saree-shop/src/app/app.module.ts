@@ -4,8 +4,7 @@ import { AppRoutingModule } from './app.routes';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
-import { RouterModule } from '@angular/router';  // Import RouterModule
-
+import { RouterModule } from '@angular/router'; // Import RouterModule
 
 import { AuthModule } from './auth/auth.module';
 import { QuotationModule } from './quotation/quotation.module';

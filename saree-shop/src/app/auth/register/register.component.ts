@@ -19,13 +19,13 @@ export class RegisterComponent {
 
   register() {
     this.authService.register(this.user).subscribe(
-      (response) => {
+      () => {
         alert('Registration successful. Please login.');
         this.router.navigate(['/auth/login']);
       },
       (error) => {
         console.error('Registration error', error);
-        alert('Registration failed. Please try again.');
+        alert('An error occurred during registration');
       }
     );
   }

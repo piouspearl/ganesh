@@ -21,6 +21,7 @@ export class InvoiceUploadComponent {
       this.invoiceService.uploadInvoice(this.selectedFile, this.orderId).subscribe(
         (response) => {
           alert('Invoice uploaded successfully');
+          this.resetForm();
         },
         (error) => {
           console.error('Invoice upload error', error);
@@ -30,5 +31,10 @@ export class InvoiceUploadComponent {
     } else {
       alert('Please select a file and enter an order ID');
     }
+  }
+
+  resetForm() {
+    this.selectedFile = null;
+    this.orderId = '';
   }
 }

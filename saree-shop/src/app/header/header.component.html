@@ -1,0 +1,18 @@
+<mat-toolbar color="primary" class="header-toolbar">
+    <div class="logo-container">
+      <img src="assets/logo.jpg" alt="Saree Shop Logo" class="logo" />
+      <span>{{ title }}</span>
+    </div>
+    <span class="spacer"></span>
+    <ng-container *ngIf="!isLoggedIn">
+      <button mat-button routerLink="/auth/login" type="button">Login</button>
+      <button mat-button routerLink="/auth/register" type="button">Register</button>
+    </ng-container>
+    <ng-container *ngIf="!isLoggedIn">
+      <button mat-button routerLink="/quotation/list" type="button">Quotations</button>
+      <button mat-button routerLink="/quotation/create" type="button">Create Quotation</button>
+      <button mat-button routerLink="/invoice/upload" type="button">Upload Invoice</button>
+      <button mat-button routerLink="/logistics/create" type="button">Logistics</button>
+      <button mat-button (click)="logout()" type="button">Logout</button>
+    </ng-container>
+  </mat-toolbar>
